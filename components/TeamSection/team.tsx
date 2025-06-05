@@ -1,4 +1,5 @@
 'use client';
+
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -6,7 +7,7 @@ const teamMembers = [
   {
     name: "Vikash Kumar",
     role: "President",
-    photo: "/image/vikash.jpg",
+    photo: "/image/vikash.jpeg",
     github: "https://github.com/vikashkrdeveloper",
     linkedin: "https://www.linkedin.com/in/vikashkrdeveloper",
     instagram: "https://www.instagram.com/vikashkrdeveloper",
@@ -14,18 +15,18 @@ const teamMembers = [
   {
     name: "Ashish Kumar",
     role: "Vice President",
-    photo: "/public/image/ashish.jpg",
+    photo: "/image/ashish.jpg",
     github: "https://github.com/DevloperAshish17",
-    linkedin: "https://www.linkedin.com/in/ashish-gupta",
+    linkedin: "https://www.linkedin.com/in/developerashish17",
     instagram: "https://www.instagram.com/virat_fan_forever_0217",
   },
   {
     name: "Sandeep Kumar",
     role: "Technical Head",
     photo: "/image/sandeep.jpeg",
-    github: "https://github.com/sandeep",
-    linkedin: "https://linkedin.com/in/sandeep",
-    instagram: "https://instagram.com/sandeep",
+    github: "https://github.com/sandeepkumar23f/",
+    linkedin: "https://www.linkedin.com/in/sandeep-kumar-b9674829a/",
+    instagram: "https://www.instagram.com/",
   },
   {
     name: "Prayag Sagar",
@@ -39,9 +40,9 @@ const teamMembers = [
     name: "Rajesh Kumar",
     role: "Content & Social Media Lead",
     photo: "/image/rajesh.jpg",
-    github: "https://github.com/",
-    linkedin: "https://linkedin.com/in/",
-    instagram: "https://instagram.com/",
+    github: "https://github.com/Rajeshkumarbaitha",
+    linkedin: "https://www.linkedin.com/in/rajesh-kumar-baitha-4aa5672ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    instagram: "https://www.instagram.com/_rajak.rajesh.09.?utm_source=qr&igsh=azZzb2Z0azljMjY3",
   },
   {
     name: "Sachin Kumar",
@@ -53,39 +54,39 @@ const teamMembers = [
   },
   {
     name: "Ayush Kumar",
-    role: "Design & Media Lead",
-    photo: "/image/sachin.jpeg",
+    role: "Media & Publicity Lead",
+    photo: "/image/Ayush.jpg",
     github: "https://github.com/",
     linkedin: "https://linkedin.com/in/",
     instagram: "https://instagram.com/",
   },
   {
     name: "Deepak Sharma",
-    role: "Design & Media Lead",
-    photo: "/image/sachin.jpeg",
+    role: "Community & Collaboration Lead",
+    photo: "/image/Deepak.jpg",
     github: "https://github.com/",
-    linkedin: "https://linkedin.com/in/",
+    linkedin: "https://www.linkedin.com/in/deepak-kumar-prasad-8660872aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram: "https://instagram.com/",
   },
   {
     name: "Rohit Kumar",
-    role: "Design & Media Lead",
-    photo: "/image/sachin.jpeg",
+    role: "Documentation & Resource Manager",
+    photo: "/image/Rohit.jpg",
     github: "https://github.com/",
     linkedin: "https://linkedin.com/in/",
     instagram: "https://instagram.com/",
   },
 ];
 
-export default function HomePage() {
+export default function TeamPage() {
   return (
-    <main className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Star Background */}
-      <div className="absolute inset-0 bg-[url('/stars.svg')] bg-cover bg-center opacity-20 z-0" />
+    <main className="min-h-screen bg-gradient-to-b from-[#0f0f0f] to-[#0b0e1a] text-white relative overflow-hidden">
+      {/* Optional Star Background Overlay */}
+      <div className="absolute inset-0 bg-[url('/stars.svg')] bg-cover bg-center opacity-10 z-0" />
 
       {/* Team Section */}
       <section className="relative z-10 px-6 py-12 md:py-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-pink-500">
           Meet the Crew
         </h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
@@ -94,8 +95,8 @@ export default function HomePage() {
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="bg-gray-900 bg-opacity-70 rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-transform"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-gray-900 bg-opacity-80 rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-transform"
             >
               <div className="w-[150px] h-[150px] relative mx-auto">
                 <Image
@@ -107,15 +108,21 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-semibold text-center mt-4">{member.name}</h3>
               <p className="text-center text-yellow-400">{member.role}</p>
-              <div className="flex justify-center gap-4 mt-4">
-                <a href={member.github} target="_blank" rel="noopener noreferrer">
-                  <Image src="/icons/github.svg" alt="GitHub" width={24} height={24} className="hover:scale-110 transition" />
+              <div className="flex justify-center gap-4 sm:gap-5 mt-4">
+                <a href={member.github} target="_blank" rel="noreferrer">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700">
+                    <Image src="/icons/github.svg" alt="GitHub" width={20} height={20} className="invert" />
+                  </div>
                 </a>
-                <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                  <Image src="/icons/linkedin.svg" alt="LinkedIn" width={24} height={24} className="hover:scale-110 transition" />
+                <a href={member.linkedin} target="_blank" rel="noreferrer">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600">
+                    <Image src="/icons/linkedin.svg" alt="LinkedIn" width={20} height={20} className="invert" />
+                  </div>
                 </a>
-                <a href={member.instagram} target="_blank" rel="noopener noreferrer">
-                  <Image src="/icons/instagram.svg" alt="Instagram" width={24} height={24} className="hover:scale-110 transition" />
+                <a href={member.instagram} target="_blank" rel="noreferrer">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-r from-purple-600 to-pink-600">
+                    <Image src="/icons/instagram.svg" alt="Instagram" width={20} height={20} className="invert" />
+                  </div>
                 </a>
               </div>
             </motion.div>
